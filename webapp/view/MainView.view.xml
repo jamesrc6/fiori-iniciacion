@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="axelera.pe.invoices.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Panel id="panelShipName" headerText="Selection Screen">
+                            <Label id="labelShipName" labelFor="shipName" text="Ship Name" class="sapUiSmallMargin"/>
+                            <Input id="shipName" width="200px" class="sapUiSmallMarginEnd"/>
+                            <Label id="labelCountry" text="Country" class="sapUiSmallMargin"/>
+                            <Select id="slCountry" selectedKey="{selectionScreen>/CountryKey}" 
+                                    forceSelection="false" items="{selectionScreen>/Countries}">
+                                <items>
+                                    <core:Item id="idItem" key="{selectionScreen>key}" text="{selectionScreen>text}" />
+                                </items>
+                            </Select>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
